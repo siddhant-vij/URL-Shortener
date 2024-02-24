@@ -8,7 +8,11 @@ import (
 )
 
 func main() {
-	repo := repository.NewInMemoryURLStore()
+	// repo := repository.NewInMemoryURLStore()
+	repo, err := repository.NewMongoDBURLStore()
+	if err != nil {
+		panic(err)
+	}
 	ctrl := controller.NewURLShortenerController(repo)
 	cliView := view.NewCLIView(ctrl)
 
