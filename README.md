@@ -25,6 +25,7 @@ The service is designed with simplicity and performance in mind, providing both 
 - **CLI Support**: Offers a command-line interface for shortening URLs and retrieving original URLs.
 - **Concurrency Support**: Handles multiple requests concurrently, ensuring high performance.
 - **In-Memory Storage**: Utilizes an in-memory repository for fast retrieval and storage of URL mappings.
+- **Persistent Storage**: Integrate a database (MongoDB) to persist URL mappings beyond the application lifecycle.
 
 <br>
 
@@ -32,7 +33,7 @@ The service is designed with simplicity and performance in mind, providing both 
 
 - **Languages and Frameworks**: The project is entirely written in Go, leveraging its standard library for HTTP server functionality & concurrency management.
 - **Architecture**: Follows the Model-View-Controller (MVC) design pattern, separating data handling (Model), user interface (View), and application logic (Controller) for clarity and maintainability.
-- **Data Storage**: Uses an in-memory data store for quick access and simplicity, with a straightforward path to adapt to database storage for persistence.
+- **Data Storage**: Uses an in-memory data store for quick access and simplicity, with a straightforward path to adapt to database storage for persistence. *Expanded to include MongoDB.*
 
 <br>
 
@@ -79,7 +80,6 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## Future Improvements
 
-- **Persistence Storage**: Integrate a database (e.g., SQLite, MongoDB) to persist URL mappings beyond the application lifecycle.
 - **Custom Short URL Aliases**: Allow users to specify custom aliases for their shortened URLs.
 - **User Authentication**: Implement user accounts and authentication to enable personalized URL management.
 - **Dockerization**: Containerize the application with Docker for easy deployment and scaling.
